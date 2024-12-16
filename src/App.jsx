@@ -4,6 +4,9 @@ import languages from "./data/languages"
 function App() {
   const [activeLanguage, setActiveLanguage] = useState(languages[0])
 
+  const changeLanguage = (curLanguage) => {
+    setActiveLanguage(curLanguage)
+}
   return (
     <>
       <header className="mb-5">
@@ -13,7 +16,7 @@ function App() {
         <div className="container">
           <div className="d-flex flex-wrap gap-2 mb-4">
             {languages.map((curLanguage) => (
-              <button key={curLanguage.id} className="btn btn-primary">
+              <button onClick={() => {setActiveLanguage(curLanguage)}} key={curLanguage.id} className="btn btn-primary">
                 {curLanguage.title}
               </button>
             ))}
