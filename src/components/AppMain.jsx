@@ -16,7 +16,7 @@ function AppMain() {
                 <Buttons
                     languages={languages}
                     activeLanguage={activeLanguage}
-                    changeLanguage={changeLanguage} />
+                    setActiveLanguage={setActiveLanguage} />
                 <Card activeLanguage={activeLanguage} />
             </div>
         </main>
