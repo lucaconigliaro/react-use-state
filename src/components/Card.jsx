@@ -2,7 +2,7 @@ function Card({ activeLanguage }) {
 
     return (
         <div className="card p-3">
-            {activeLanguage ? (
+            {activeLanguage !== null ? (
                 <div>
                     <h2>{activeLanguage.title}</h2>
                     <p>{activeLanguage.description}</p>
